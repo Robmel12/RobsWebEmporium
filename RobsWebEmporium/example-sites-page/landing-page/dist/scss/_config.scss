@@ -1,0 +1,27 @@
+$primary-color:white;
+$secondary-color: #001294 ;
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin transition-ease {
+  transition: all .5s ease-in-out;
+}
+@function set-text-color($color) {
+  @if (lightness($color) > 20%) {
+    @return black;
+  }@else {
+      @return white;
+    }
+}
+@font-face {
+  font-family: 'acmeregular';
+ 
+  src: url('../css/Acme-Regular-webfont.woff') format('woff');
+
+}
+

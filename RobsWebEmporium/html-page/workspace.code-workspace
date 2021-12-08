@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Master-site"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "html-page"
+	}
+}

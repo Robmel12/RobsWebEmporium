@@ -1,0 +1,129 @@
+
+.container__jar {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-size: cover;
+  
+ .shelf {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   flex-direction: row;
+   gap: 30px;
+    width: 50vw;
+    height: 160px;
+    position: absolute;
+    z-index: 2;
+    color: saddlebrown;
+    background-color: currentColor;
+    background: linear-gradient(
+    to right,
+    rgba(gray, 0.5),
+    rgba(gray, 0.8)
+  );
+  border: groove;
+ }
+ .lid{
+   justify-content: center;
+ }
+.jar {
+  justify-content: flex-start;
+  display: flex;
+  position: relative;
+  border-radius: 25% 25% 25% 25%;
+  width: 70px;
+  height: 100px;
+  background-color: rgba($color: skyblue, $alpha: .5);
+  
+  align-items: center;
+  border-bottom: groove;
+  border-color: rgba($color: $primary-color, $alpha: .5);
+  border-width: 5px;
+}
+
+
+.candy {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: -12px;
+  top: -5px;
+  z-index: 1;
+  box-shadow: 45px  15px 0 0  blue,
+  40px  40px 0 0  yellow,
+ 30px  10px 0 0  green,
+ 50px  25px 0 0  purple,
+ 60px  25px 0 0  teal,
+ 15px  25px 0 0  orange,
+ 25px  70px 0 0  black,
+ 30px  80px 0 0  lime,
+ 40px  80px 0 0  pink,
+ 30px  25px 0 0  crimson,
+ 40px  70px 0 0  lavenderblush,
+ 20px  50px 0 0  lightcoral,
+ 30px  50px 0 0  khaki,
+ 50px  50px 0 0  goldenrod,
+ 55px  55px 0 0  blue;
+}
+.candyGlow {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  left: -12;
+  top: -5px;
+  z-index: 1;
+  box-shadow: 42px  17px 5px .1px rgba($color:white, $alpha: .65)/*blue*/,
+
+  58px  27px 5px .1px rgba($color:white, $alpha: .55)/*teal*/,
+  37px  40px 3px .1px rgba($color:white, $alpha: .95)/*yellow*/,
+ 28px  12px 5px .1px rgba($color:white, $alpha: .75)/*green*/,
+ 12px  27px 5px .1px rgba($color:white, $alpha: .75)/*orange*/,
+ 22px  72px 5px .1px rgba($color:white, $alpha: .75)/*black*/,
+ 27px  27px 5px .1px rgba($color:white, $alpha: .75)/*crimson*/,
+ 18px  50px 5px .1px rgba($color:white, $alpha: .75)/*lightcoral*/,
+ 38px  80px 5px .1px rgba($color:white, $alpha: .75)/*pink*/,
+ 48px  52px 5px .1px rgba($color:white, $alpha: .75)/*goldenrod*/,
+ 30px  85px 5px .1px rgba($color:white, $alpha: .75)/*lime*/,
+ 50px  25px 5px .1px rgba($color:white, $alpha: .55)/*purple*/,
+
+
+}
+
+
+
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 5px 20px;
+  font-size: .5rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgba(black, $alpha: .5);
+  background-image: linear-gradient(to top left,
+                                    rgba(0, 0, 0, .2),
+                                    rgba(0, 0, 0, .2) 30%,
+                                    rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.styled:hover {
+  background-color: rgba($color: $primary-color, $alpha: .9);
+}
+
+.styled:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+              inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+
+
+
+}

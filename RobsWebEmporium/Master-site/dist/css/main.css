@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "acmeregular";
+  src: url("../css/Acme-Regular-webfont.woff") format("woff");
+}
+.home {
+  box-sizing: border-box;
+  display: block;
+  align-content: flex-start;
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8)), url("../img/pharmacist-at-counter-in-pharmacy-man-druggist-stands-opposite-shelves-with-medicines-and-points-to.jpeg") center top;
+  background-size: cover;
+}
+.home__name {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  border-bottom: 2px solid black;
+}
+.home__name--last {
+  color: #642d19;
+  font-weight: 700;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 28px;
+  height: 3px;
+  background: black;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 3px;
+  background: black;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  height: 3px;
+  background: black;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger.open {
+  transform: rotate(360deg);
+  background: transparent;
+}
+.menu-btn__burger.open::before {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+.menu-btn__burger.open::after {
+  width: 28px;
+  transform: rotate(-45deg) translate(3px, -7px);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.98;
+  visibility: hidden;
+}
+.nav.open {
+  visibility: visible;
+}
+.nav .menu-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background: #a0b7d6;
+  list-style-type: none;
+  padding-right: 1rem;
+  transform: translateY(-100%);
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav.open {
+  transform: translateY(0);
+}
+.nav .menu-nav__item {
+  transform: translateX(100vw);
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav__item.open {
+  transform: translateX(0);
+}
+.nav .menu-nav__item.active > a {
+  color: #642d19;
+}
+.nav .menu-nav__link {
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: 300;
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav__link:hover {
+  color: #642d19;
+}
+
+.container__jar {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-size: cover;
+}
+.container__jar .shelf {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px;
+  width: 50vw;
+  height: 160px;
+  position: absolute;
+  z-index: 2;
+  color: saddlebrown;
+  background-color: currentColor;
+  background: linear-gradient(to right, rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0.8));
+  border: groove;
+}
+.container__jar .lid {
+  justify-content: center;
+}
+.container__jar .jar {
+  justify-content: flex-start;
+  display: flex;
+  position: relative;
+  border-radius: 25% 25% 25% 25%;
+  width: 70px;
+  height: 100px;
+  background-color: rgba(135, 206, 235, 0.5);
+  align-items: center;
+  border-bottom: groove;
+  border-color: rgba(160, 183, 214, 0.5);
+  border-width: 5px;
+}
+.container__jar .candy {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: -12px;
+  top: -5px;
+  z-index: 1;
+  box-shadow: 45px 15px 0 0 blue, 40px 40px 0 0 yellow, 30px 10px 0 0 green, 50px 25px 0 0 purple, 60px 25px 0 0 teal, 15px 25px 0 0 orange, 25px 70px 0 0 black, 30px 80px 0 0 lime, 40px 80px 0 0 pink, 30px 25px 0 0 crimson, 40px 70px 0 0 lavenderblush, 20px 50px 0 0 lightcoral, 30px 50px 0 0 khaki, 50px 50px 0 0 goldenrod, 55px 55px 0 0 blue;
+}
+.container__jar .candyGlow {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  left: -12;
+  top: -5px;
+  z-index: 1;
+  box-shadow: 42px 17px 5px 0.1px rgba(255, 255, 255, 0.65), 58px 27px 5px 0.1px rgba(255, 255, 255, 0.55), 37px 40px 3px 0.1px rgba(255, 255, 255, 0.95), 28px 12px 5px 0.1px rgba(255, 255, 255, 0.75), 12px 27px 5px 0.1px rgba(255, 255, 255, 0.75), 22px 72px 5px 0.1px rgba(255, 255, 255, 0.75), 27px 27px 5px 0.1px rgba(255, 255, 255, 0.75), 18px 50px 5px 0.1px rgba(255, 255, 255, 0.75), 38px 80px 5px 0.1px rgba(255, 255, 255, 0.75), 48px 52px 5px 0.1px rgba(255, 255, 255, 0.75), 30px 85px 5px 0.1px rgba(255, 255, 255, 0.75), 50px 25px 5px 0.1px rgba(255, 255, 255, 0.55);
+}
+.container__jar .styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 5px 20px;
+  font-size: 0.5rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+.container__jar .styled:hover {
+  background-color: rgba(160, 183, 214, 0.9);
+}
+.container__jar .styled:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+body {
+  background: white;
+  color: black;
+  height: 100vh;
+  font-family: "Segoe UI", "Tahoma", Geneva, Verdana, sans-serif;
+  line-height: 1;
+}
+
+h1 {
+  position: relative;
+  font-size: 10vw;
+  padding-bottom: 30px;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+main a {
+  padding: 0.4rem;
+  transition: all 0.5s ease-in-out;
+}
+main a:hover {
+  color: #642d19;
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: black;
+}/*# sourceMappingURL=main.css.map */

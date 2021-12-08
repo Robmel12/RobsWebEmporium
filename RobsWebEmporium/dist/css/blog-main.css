@@ -1,0 +1,37 @@
+.home {
+  display: flex;
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: top;
+  background: linear-gradient(to right, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.2)), url("../img/IMG_0225.jpg") center top;
+  background-size: cover;
+}
+
+.home .intro {
+  padding-bottom: 3rem;
+}
+
+.home__name {
+  font-size: 5rem;
+  padding-bottom: 20rem;
+  margin-top: 1rem;
+  border-bottom: 2px solid white;
+}
+
+.home__name--last {
+  color: #ff662e;
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "acmeregular";
+  src: url("../css/Acme-Regular-webfont.woff") format("woff");
+}/*# sourceMappingURL=blog-main.css.map */
